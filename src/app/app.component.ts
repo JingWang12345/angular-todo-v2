@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TodoAddComponent } from './components/todo-add/todo-add.component';
+import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
@@ -10,4 +12,9 @@ export class AppComponent {
 
   title = 'angular-todo';
 
+  constructor(public dialog: MatDialog){}
+
+  openModal(){
+   this.dialog.open(TodoAddComponent)
+  }
 }
